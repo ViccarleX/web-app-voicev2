@@ -4,49 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Identificación de Orden por Voz con JavaScript</title>
+    <title>Ejecución de Órdenes</title>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Identificación de Orden por Voz</a>
-</nav>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Ejecución de Órdenes</a>
+    </nav>
+</header>
 
 <div class="container mt-5">
     <div class="row">
-        <div class="col-md-9">
-            <span class="fs-1 fw-bold fst-italic" id="controltexto">Control de textos</span>
-            <div class="container mt-4">
-                <div id="listeningText" class="mt-3"></div>
-                <div id="result" class="mt-3"></div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card">
-                <div class="card-header">Después de 5 segundos de inactividad, el reconocimiento se apaga automáticamente</div>
-                <div class="card-body">
-                    <ul>
-                        <li>Tamaño 3</li>
-                        <li>Abre una pestaña</li>
-                        <li>Llevame a youtube</li>
-                        <li>Cerrar pestaña</li>
-                        <li>Cerrar Navegador</li>
-                        <!-- Agrega más comandos según sea necesario -->
-                    </ul>
-                </div>
-            </div>
+        <div class="col-md-12">
+            <h2>Última Orden:</h2>
+            <div id="ultimaOrden" class="mt-3"></div>
         </div>
     </div>
 </div>
 
+<main class="container mt-4">
+    <label for="inputPassword5" class="form-label"> Orden para ejecutar: </label>
+    <span class="form-control" id="orden">
+        <h4 id="ordenTexto"></h4>
+    </span>
+</main>
+
 <footer class="bg-dark text-white text-center p-3 mt-5">
-    <p>Derechos Reservados &copy; 2024</p>
+    <p>Derechos Reservados Victor Alexis Rangel Perez&copy; 2024</p>
 </footer>
 
-<script src="app.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
-
-
 
 
