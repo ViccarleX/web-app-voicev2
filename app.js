@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return; // Si el reconocimiento no está activo, no se procesa la transcripción
         }
 
-        const keywords = ['tamaño 3', 'abre una pestaña', 'llevame a youtube', 'modificar ventana', 'cerrar una pestaña', 'cerrar navegador']; // Array de palabras clave
+        const keywords = ['tamaño 3', 'abre una pestaña', 'abre youtube', 'modificar ventana', 'cerrar pestaña', 'cerrar navegador']; // Array de palabras clave
 
         resultDiv.innerHTML = `<strong>Resultado:</strong> ${transcript}`;
 
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 ordenDetectada = keywords[i];
                 switch (keywords[i]) {
                     case 'tamaño 3':
-                        controltexto.classList.add("fs-1");
+                        controltexto.classList.add("h1");
                         controltexto.style.color = "red";
                         console.log("Se encontró la palabra 'tamaño 3'.");
                         break;
@@ -49,19 +49,19 @@ document.addEventListener('DOMContentLoaded', function () {
                         window.open('https://www.google.com/', '_blank');
                         console.log("Se detectó 'abre una pestaña'.");
                         break;
-                    case 'llevame a youtube':
+                    case 'abre youtube':
                         // Abre la página en una nueva pestaña
                         window.open('https://www.youtube.com/', '_blank');
-                        console.log("Se detectó 'llévame a youtube'.");
+                        console.log("Se detectó 'abre youtube'.");
                         break;
                     case 'modificar ventana':
                         window.resizeTo(800, 600); // Modifica el tamaño de la ventana del navegador
                         console.log("Se detectó 'modificar ventana'.");
                         break;
-                    case 'cerrar una pestaña':
+                    case 'cerrar pestaña':
                         // Abre una nueva pestaña y cierra la actual
                         window.open('about:blank', '_self').close();
-                        console.log("Se detectó 'cerrar una pestaña'.");
+                        console.log("Se detectó 'cerrar pestaña'.");
                         break;
                     case 'cerrar navegador':
                         window.close(); // Cierra el navegador

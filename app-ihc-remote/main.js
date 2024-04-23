@@ -21,13 +21,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (ultimoId !== ultimaOrden.id) {
                         ultimoId = ultimaOrden.id;
                         // Actualizar el contenido de la página con la nueva frase
-                        ultimaOrdenElement.textContent = ultimaOrden.orden;
+                        
                         ordenTextoElement.textContent = ultimaOrden.orden;
                     }
                 } else {
                     // Si no hay datos, o el array está vacío, mostrar un mensaje
                     console.error("No se recibieron datos válidos.");
-                    ultimaOrdenElement.textContent = "No se encontró la última orden.";
+                    
                     ordenTextoElement.textContent = "No se encontró la última orden.";
                 }
             })
